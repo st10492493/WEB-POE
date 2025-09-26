@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive -->
+    <title>Car Wash - Book Appointment</title> <!-- Page title shown in browser tab -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent form submission
+            alert("Thank you, your appointment is booked!"); // Display a thank you message
+            document.getElementById("bookingForm").reset(); // Reset the form after submission
+        }
+    </script>
+</head>
+<body>
+    <!-- ================= HEADER / NAVIGATION ================= -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li> <!-- Link to Home page -->
+                <li><a href="Book appointment.html">Book Appointment</a></li> <!-- Link to current Book appointment page -->
+                <li><a href="hospitality.html">hospitality</a></li> <!-- Link to Hospitality page -->
+                <li><a href="service.html">Services</a></li> <!-- Link to Services page -->
+                <li><a href="contact.html">Contact Us</a></li>  <!-- Link to Contact page -->
+            </ul>
+        </nav>
+    </header>
+      <!-- ================= BOOKING FORM SECTION ================= -->
+    <div class="booking-form-container">
+        <h2>Book Your Car Wash Appointment</h2>
+        <!-- Appointment form -->
+        <form id="bookingForm" onsubmit="submitForm(event)">
+             <!-- Full Name input -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+             <!-- Phone Number input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+             <!-- Booking Date input -->
+            <label for="date">Booking Date:</label>
+            <input type="date" id="date" name="date" required>
+             <!-- Additional Message textarea -->
+            <label for="time">Booking Time:</label>
+            <input type="time" id="time" name="time" required>
+             <!-- Additional Message textarea -->
+            <label for="message">Additional Message:</label>
+            <textarea id="message" name="message" placeholder="Enter any additional information..." rows="4"></textarea>
+             <!-- Submit button -->
+            <button type="submit">Book Appointment</button>
+
+        </form>
+
+    </div>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy;2025 Car wash.All Right Reserved</p> <!-- Footer text -->
+        </footer>
+        
+        <div class="social-icons">
+                <a href="http://www.instagram.com/" class="instagram" data-platform="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="http://www.facebook.com" class="facebook" data-platform="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="http://www.twitter.com/" class="twitter" data-platform="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="http://www.tiktok.com/" class="tiktok" data-platform="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+</body>
+</html>
